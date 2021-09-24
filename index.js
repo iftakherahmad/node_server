@@ -1,10 +1,11 @@
-PORT=3002;
+
 const database=require('./src/controller/dbservice.js');
 let cors=require('cors');
 express=require('express');
 const bodyParser=require('body-parser');
 app=express();
-
+PORT=process.env.PORT || 5000;
+console.log(process.env.PORT)
 app.use(cors());
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json())
